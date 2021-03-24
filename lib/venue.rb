@@ -9,4 +9,21 @@ class Venue
         @patrons = []
     end
 
+    def add_patron(patron)
+        @patrons << patron
+    end
+
+    def yell_at_patrons
+        @patrons.map do |patron|
+            patron.upcase
+        end
+    end
+
+    def over_capacity?
+        if @patrons.length > @capacity
+            return true
+        else
+            false
+        end
+    end
 end
