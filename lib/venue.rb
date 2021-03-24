@@ -26,4 +26,10 @@ class Venue
             false
         end
     end
+
+    def kick_out
+        until @patrons.count <= @capacity
+            @patrons.pop
+        end
+    end
 end
